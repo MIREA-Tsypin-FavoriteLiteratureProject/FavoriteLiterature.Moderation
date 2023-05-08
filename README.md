@@ -1,1 +1,1 @@
-# -FavoriteLiterature.Moderation
+# FavoriteLiterature.Moderation
