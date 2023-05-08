@@ -18,12 +18,12 @@ public sealed class Draft : BaseEntity
     public string? Description { get; set; }
     
     /// <summary>
-    /// Авторы произведения
+    /// Ссылка на авторов произведения
     /// </summary>
-    public ICollection<Guid> Authors { get; } = new List<Guid>();
+    public List<Guid> Authors { get; }
     
     /// <summary>
-    /// Жанры произведения
+    /// Ссылка на жанры произведения
     /// </summary>
-    public ICollection<Guid> Genres { get; } = new List<Guid>();
+    public List<Guid> Genres { get; }
 }

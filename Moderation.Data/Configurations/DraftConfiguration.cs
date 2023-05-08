@@ -16,5 +16,7 @@ public sealed class DraftConfiguration : BaseEntityConfiguration<Draft>
         builder.Property(x => x.Id).HasColumnName("id").IsRequired();
         builder.Property(x => x.Name).HasColumnName("name").HasMaxLength(100).IsRequired();
         builder.Property(x => x.Description).HasColumnName("description");
+        builder.Property(x => x.Authors).HasColumnName("authors").IsRequired();
+        builder.Property(x => x.Genres).HasColumnName("genres").IsRequired();
     }
 }
