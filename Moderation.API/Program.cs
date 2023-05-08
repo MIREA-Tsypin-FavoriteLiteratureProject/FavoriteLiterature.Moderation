@@ -1,3 +1,7 @@
+using FavoriteLiterature.Moderation.Data;
+using FavoriteLiterature.Moderation.Extensions.Builder;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -8,6 +12,9 @@ if (string.IsNullOrWhiteSpace(connectionString))
 }
 
 builder.Services.AddControllers();
+builder.Services
+    .AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
+builder.AddRepositories();
 
 var app = builder.Build();
 
