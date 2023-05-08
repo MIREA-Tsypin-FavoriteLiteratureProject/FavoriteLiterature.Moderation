@@ -1,6 +1,10 @@
 ﻿namespace FavoriteLiterature.Moderation.Data.Common;
 
-public class ModerationApiTables
+/// <summary>
+/// Таблицы сервиса Moderation.API
+/// </summary>
+public static class ModerationApiTables
 {
-    
+    public static string Attachments => "attachments";
+    public static string Drafts => "drafts";
 }
