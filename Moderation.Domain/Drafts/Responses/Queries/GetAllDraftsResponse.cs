@@ -1,4 +1,4 @@
-﻿namespace Moderation.Domain.Drafts.Responses.Queries;
+﻿namespace FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
 
 public class GetAllDraftsResponse
 {

@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data.Repositories;
+﻿namespace FavoriteLiterature.Moderation.Data.Repositories;
 
 public interface IUnitOfWork
 {

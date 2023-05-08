@@ -1,4 +1,4 @@
-﻿namespace Moderation.Domain.Drafts.Responses.Commands;
+﻿namespace FavoriteLiterature.Moderation.Domain.Drafts.Responses.Commands;
 
 public class CreateDraftResponse
 {

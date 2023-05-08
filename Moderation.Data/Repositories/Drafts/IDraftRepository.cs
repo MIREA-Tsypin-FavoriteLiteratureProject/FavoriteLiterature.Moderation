@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data.Repositories.Drafts;
+﻿namespace FavoriteLiterature.Moderation.Data.Repositories.Drafts;
 
 public interface IDraftRepository
 {

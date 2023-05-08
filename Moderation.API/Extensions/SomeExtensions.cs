@@ -1,4 +1,4 @@
-﻿namespace Moderation.API.Extensions;
+﻿namespace FavoriteLiterature.Moderation.Extensions;
 
 public class SomeExtensions
 {

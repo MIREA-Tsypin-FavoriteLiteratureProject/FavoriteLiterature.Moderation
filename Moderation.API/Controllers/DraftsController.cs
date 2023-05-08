@@ -1,4 +1,4 @@
-﻿namespace Moderation.API.Controllers;
+﻿namespace FavoriteLiterature.Moderation.Controllers;
 
 public class DraftsController
 {
