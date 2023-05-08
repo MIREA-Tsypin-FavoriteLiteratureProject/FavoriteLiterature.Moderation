@@ -1,4 +1,4 @@
-﻿namespace Moderation.Application.Handlers.Drafts.Commands;
+﻿namespace FavoriteLiterature.Moderation.Application.Handlers.Drafts.Commands;
 
 public class CreateDraftCommandHandler
 {

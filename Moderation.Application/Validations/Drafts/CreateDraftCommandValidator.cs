@@ -1,4 +1,4 @@
-﻿namespace Moderation.Application.Validations.Drafts;
+﻿namespace FavoriteLiterature.Moderation.Application.Validations.Drafts;
 
 public class CreateDraftCommandValidator
 {

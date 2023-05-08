@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data.Entities;
+﻿namespace FavoriteLiterature.Moderation.Data.Entities;
 
 public class Draft
 {

@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data.Common;
+﻿namespace FavoriteLiterature.Moderation.Data.Common;
 
 public class ModerationApiTables
 {

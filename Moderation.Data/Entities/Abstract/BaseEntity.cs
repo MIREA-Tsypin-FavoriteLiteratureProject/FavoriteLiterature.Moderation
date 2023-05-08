@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data.Entities.Abstract;
+﻿namespace FavoriteLiterature.Moderation.Data.Entities.Abstract;
 
 public class BaseEntity
 {

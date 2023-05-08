@@ -1,4 +1,4 @@
-﻿namespace Moderation.Application.Handlers.Drafts.Queries;
+﻿namespace FavoriteLiterature.Moderation.Application.Handlers.Drafts.Queries;
 
 public class GetAllDraftsQueryHandler
 {

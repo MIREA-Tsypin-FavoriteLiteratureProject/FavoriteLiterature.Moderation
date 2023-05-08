@@ -1,4 +1,4 @@
-﻿namespace Moderation.Data;
+﻿namespace FavoriteLiterature.Moderation.Data;
 
 public class FavoriteLiteratureModerationDbContext
 {
