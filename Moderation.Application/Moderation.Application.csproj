@@ -11,6 +11,8 @@
     <ItemGroup>
       <PackageReference Include="AutoMapper" />
       <PackageReference Include="MediatR" />
+      <PackageReference Include="Newtonsoft.Json" />
+      <PackageReference Include="RabbitMQ.Client" />
     </ItemGroup>
 
     <ItemGroup>

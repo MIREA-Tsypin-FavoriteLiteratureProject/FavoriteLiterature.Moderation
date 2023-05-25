@@ -30,6 +30,13 @@ public sealed class DraftsController : ControllerBase
     public async Task<CreateDraftResponse> CreateAsync(CreateDraftCommand command, CancellationToken cancellationToken)
         => await _mediator.Send(command, cancellationToken);
 
+    [HttpPost("{id:guid}")]
+    public async Task<VerifyDraftResponse> VerifyDraftAsync(Guid id, VerifyDraftCommand command, CancellationToken cancellationToken)
+    {
+        command.Id = id;
+        return await _mediator.Send(command, cancellationToken);
+    }
+
     [HttpPut("{id:guid}")]
     public async Task<UpdateDraftResponse> UpdateAsync(Guid id, UpdateDraftCommand command, CancellationToken cancellationToken)
     {

@@ -20,6 +20,7 @@ public static class MediatrExtensions
         builder.Services.AddTransient<IRequestHandler<GetAllDraftsQuery, GetAllDraftsResponse>, GetAllDraftsQueryHandler>();
         builder.Services.AddTransient<IRequestHandler<CreateDraftCommand, CreateDraftResponse>, CreateDraftCommandHandler>();
         builder.Services.AddTransient<IRequestHandler<UpdateDraftCommand, UpdateDraftResponse>, UpdateDraftCommandHandler>();
+        builder.Services.AddTransient<IRequestHandler<VerifyDraftCommand, VerifyDraftResponse>, VerifyDraftCommandHandler>();
         
         #endregion
     }
