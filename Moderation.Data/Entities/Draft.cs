@@ -16,14 +16,14 @@ public sealed class Draft : BaseEntity
     /// Краткое описание произведения 
     /// </summary>
     public string? Description { get; set; }
-    
+
     /// <summary>
     /// Ссылка на авторов произведения
     /// </summary>
-    public List<Guid> Authors { get; }
-    
+    public List<Guid> Authors { get; set; }
+
     /// <summary>
     /// Ссылка на жанры произведения
     /// </summary>
-    public List<Guid> Genres { get; }
+    public List<Guid> Genres { get; set; }
 }

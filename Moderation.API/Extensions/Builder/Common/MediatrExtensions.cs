@@ -1,5 +1,8 @@
-﻿using FavoriteLiterature.Moderation.Application.Handlers.Drafts.Queries;
+﻿using FavoriteLiterature.Moderation.Application.Handlers.Drafts.Commands;
+using FavoriteLiterature.Moderation.Application.Handlers.Drafts.Queries;
+using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Commands;
 using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Queries;
+using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Commands;
 using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
 using MediatR;
 
@@ -15,6 +18,7 @@ public static class MediatrExtensions
         
         builder.Services.AddTransient<IRequestHandler<GetDraftQuery, GetDraftResponse>, GetDraftQueryHandler>();
         builder.Services.AddTransient<IRequestHandler<GetAllDraftsQuery, GetAllDraftsResponse>, GetAllDraftsQueryHandler>();
+        builder.Services.AddTransient<IRequestHandler<CreateDraftCommand, CreateDraftResponse>, CreateDraftCommandHandler>();
         
         #endregion
     }

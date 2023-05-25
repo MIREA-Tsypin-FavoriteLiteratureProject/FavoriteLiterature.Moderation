@@ -1,4 +1,6 @@
-﻿using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Queries;
+﻿using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Commands;
+using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Queries;
+using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Commands;
 using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -23,4 +25,8 @@ public sealed class DraftsController : ControllerBase
     [HttpGet("{id:guid}")]
     public async Task<GetDraftResponse> GetAsync(Guid id, CancellationToken cancellationToken)
         => await _mediator.Send(new GetDraftQuery(id), cancellationToken);
+
+    [HttpPost]
+    public async Task<CreateDraftResponse> CreateAsync(CreateDraftCommand command, CancellationToken cancellationToken)
+        => await _mediator.Send(command, cancellationToken);
 }

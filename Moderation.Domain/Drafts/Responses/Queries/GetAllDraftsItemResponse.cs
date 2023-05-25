@@ -8,7 +8,7 @@ public class GetAllDraftsItemResponse
     
     public string? Description { get; set; }
     
-    public List<Guid> Authors { get; }
+    public List<Guid> Authors { get; set; }
     
-    public List<Guid> Genres { get; }
+    public List<Guid> Genres { get; set; }
 }
