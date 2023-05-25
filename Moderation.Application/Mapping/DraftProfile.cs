@@ -8,6 +8,7 @@ public sealed class DraftProfile : Profile
 {
     public DraftProfile()
     {
+        CreateMap<Draft, GetDraftResponse>();
         CreateMap<Draft, GetAllDraftsItemResponse>();
     }
 }

@@ -13,6 +13,7 @@ public static class MediatrExtensions
 
         #region Draft
         
+        builder.Services.AddTransient<IRequestHandler<GetDraftQuery, GetDraftResponse>, GetDraftQueryHandler>();
         builder.Services.AddTransient<IRequestHandler<GetAllDraftsQuery, GetAllDraftsResponse>, GetAllDraftsQueryHandler>();
         
         #endregion

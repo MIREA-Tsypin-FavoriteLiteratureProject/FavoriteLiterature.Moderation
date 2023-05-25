@@ -19,4 +19,8 @@ public sealed class DraftsController : ControllerBase
     [HttpGet]
     public async Task<GetAllDraftsResponse> GetAllAsync([FromQuery] GetAllDraftsQuery query, CancellationToken cancellationToken)
         => await _mediator.Send(query, cancellationToken);
+
+    [HttpGet("{id:guid}")]
+    public async Task<GetDraftResponse> GetAsync(Guid id, CancellationToken cancellationToken)
+        => await _mediator.Send(new GetDraftQuery(id), cancellationToken);
 }
