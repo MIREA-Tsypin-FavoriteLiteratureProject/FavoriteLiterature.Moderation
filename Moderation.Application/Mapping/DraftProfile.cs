@@ -13,5 +13,6 @@ public sealed class DraftProfile : Profile
         CreateMap<Draft, GetAllDraftsItemResponse>();
 
         CreateMap<CreateDraftCommand, Draft>();
+        CreateMap<UpdateDraftCommand, Draft>();
     }
 }
