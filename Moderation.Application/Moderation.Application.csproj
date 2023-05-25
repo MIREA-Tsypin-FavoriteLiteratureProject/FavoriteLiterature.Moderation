@@ -8,4 +8,14 @@
         <RootNamespace>FavoriteLiterature.Moderation.Application</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" />
+      <PackageReference Include="MediatR" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Moderation.Data\Moderation.Data.csproj" />
+      <ProjectReference Include="..\Moderation.Domain\Moderation.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

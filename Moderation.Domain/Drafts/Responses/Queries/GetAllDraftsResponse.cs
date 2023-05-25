@@ -1,6 +1,10 @@
-﻿namespace FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
+﻿using FavoriteLiterature.Moderation.Domain.Common.Pagination.Responses;
 
-public class GetAllDraftsResponse
+namespace FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
+
+public class GetAllDraftsResponse : PagedResponse<GetAllDraftsItemResponse>
 {
-    
+    public GetAllDraftsResponse(IEnumerable<GetAllDraftsItemResponse> items) : base(items)
+    {
+    }
 }

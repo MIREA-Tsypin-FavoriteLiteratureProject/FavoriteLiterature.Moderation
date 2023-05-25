@@ -1,6 +1,13 @@
-﻿namespace FavoriteLiterature.Moderation.Application.Mapping;
+﻿using AutoMapper;
+using FavoriteLiterature.Moderation.Data.Entities;
+using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Queries;
 
-public class DraftProfile
+namespace FavoriteLiterature.Moderation.Application.Mapping;
+
+public sealed class DraftProfile : Profile
 {
-    
+    public DraftProfile()
+    {
+        CreateMap<Draft, GetAllDraftsItemResponse>();
+    }
 }
