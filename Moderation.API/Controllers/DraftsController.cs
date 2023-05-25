@@ -1,6 +1,10 @@
-﻿namespace FavoriteLiterature.Moderation.Controllers;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class DraftsController
+namespace FavoriteLiterature.Moderation.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public sealed class DraftsController : ControllerBase
 {
     
 }

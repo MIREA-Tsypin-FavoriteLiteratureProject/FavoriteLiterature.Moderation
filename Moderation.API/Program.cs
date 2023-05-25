@@ -1,5 +1,7 @@
 using FavoriteLiterature.Moderation.Data;
+using FavoriteLiterature.Moderation.Extensions;
 using FavoriteLiterature.Moderation.Extensions.Builder;
+using FavoriteLiterature.Moderation.Extensions.Builder.Common;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,14 +14,17 @@ if (string.IsNullOrWhiteSpace(connectionString))
 }
 
 builder.Services.AddControllers();
-builder.Services
-    .AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
+builder.AddSwagger();
 builder.AddRepositories();
+builder.AddNormalizeRoute();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.MapControllers();
