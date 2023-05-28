@@ -17,6 +17,8 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
 builder.AddSwagger();
 builder.AddRepositories();
+builder.AddMediatr();
+builder.AddAutoMapper();
 builder.AddNormalizeRoute();
 
 var app = builder.Build();

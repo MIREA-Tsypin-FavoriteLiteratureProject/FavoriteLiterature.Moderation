@@ -1,9 +1,9 @@
 ﻿namespace FavoriteLiterature.Moderation.Domain.Drafts.Responses.Commands;
 
-public class CreateDraftResponse
+public class VerifyDraftResponse
 {
     public Guid Id { get; }
 
-    public CreateDraftResponse(Guid id)
+    public VerifyDraftResponse(Guid id)
         => Id = id;
 }

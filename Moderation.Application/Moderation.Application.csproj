@@ -8,4 +8,16 @@
         <RootNamespace>FavoriteLiterature.Moderation.Application</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" />
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="Newtonsoft.Json" />
+      <PackageReference Include="RabbitMQ.Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Moderation.Data\Moderation.Data.csproj" />
+      <ProjectReference Include="..\Moderation.Domain\Moderation.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
