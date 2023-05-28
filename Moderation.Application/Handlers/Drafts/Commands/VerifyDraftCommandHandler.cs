@@ -55,7 +55,7 @@ public sealed class VerifyDraftCommandHandler : IRequestHandler<VerifyDraftComma
         const string queueName = "favLitQueue";
         
         channel.QueueDeclare(queue: queueName,
-            durable: false,
+            durable: true,
             exclusive: false,
             autoDelete: false,
             arguments: null);
