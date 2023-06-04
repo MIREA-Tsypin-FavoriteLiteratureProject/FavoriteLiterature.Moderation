@@ -6,7 +6,7 @@ namespace FavoriteLiterature.Moderation.Data.Repositories.Common;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
-    private readonly FavoriteLiteratureModerationDbContext _dbContext;
+    protected readonly FavoriteLiteratureModerationDbContext _dbContext;
     private readonly DbSet<T> _entitySet;
 
     protected GenericRepository(FavoriteLiteratureModerationDbContext dbContext)
