@@ -20,6 +20,7 @@ builder.AddRepositories();
 builder.AddMediatr();
 builder.AddAutoMapper();
 builder.AddNormalizeRoute();
+builder.AddRabbitMq();
 builder.AddAttachmentStorage();
 
 var app = builder.Build();
