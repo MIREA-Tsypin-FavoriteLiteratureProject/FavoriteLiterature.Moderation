@@ -19,10 +19,10 @@ public sealed class GetDraftQueryHandler : IRequestHandler<GetDraftQuery, GetDra
 
     public async Task<GetDraftResponse> Handle(GetDraftQuery query, CancellationToken cancellationToken)
     {
-        var genreData = await _unitOfWork.DraftsRepository.GetAsync(draft =>
+        var draftData = await _unitOfWork.DraftsRepository.GetAsync(draft =>
                 draft.Id == query.Id,
             cancellationToken);
 
-        return _mapper.Map<GetDraftResponse>(genreData);
+        return _mapper.Map<GetDraftResponse>(draftData);
     }
 }

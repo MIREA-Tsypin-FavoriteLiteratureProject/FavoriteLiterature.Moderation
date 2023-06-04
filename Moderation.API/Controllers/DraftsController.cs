@@ -7,15 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FavoriteLiterature.Moderation.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public sealed class DraftsController : ControllerBase
+public sealed class DraftsController : BaseApiController
 {
-    private readonly IMediator _mediator;
-
-    public DraftsController(IMediator mediator)
+    public DraftsController(IMediator mediator) : base(mediator)
     {
-        _mediator = mediator;
     }
 
     [HttpGet]

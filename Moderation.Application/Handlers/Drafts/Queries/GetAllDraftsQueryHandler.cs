@@ -19,10 +19,10 @@ public sealed class GetAllDraftsQueryHandler : IRequestHandler<GetAllDraftsQuery
     
     public async Task<GetAllDraftsResponse> Handle(GetAllDraftsQuery query, CancellationToken cancellationToken)
     {
-        var genresData = await _unitOfWork.DraftsRepository.GetAllAsync(
+        var draftsData = await _unitOfWork.DraftsRepository.GetAllAsync(
                 query.Skip, query.Take, 
             cancellationToken);
 
-        return new GetAllDraftsResponse(_mapper.Map<IEnumerable<GetAllDraftsItemResponse>>(genresData));
+        return new GetAllDraftsResponse(_mapper.Map<IEnumerable<GetAllDraftsItemResponse>>(draftsData));
     }
 }

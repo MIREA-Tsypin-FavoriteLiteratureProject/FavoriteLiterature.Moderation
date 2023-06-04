@@ -26,4 +26,9 @@ public sealed class Draft : BaseEntity
     /// Ссылка на жанры произведения
     /// </summary>
     public List<Guid> Genres { get; set; }
+
+    /// <summary>
+    /// Ссылка на вложения
+    /// </summary>
+    public List<Attachment> Attachments { get; set; }
 }
