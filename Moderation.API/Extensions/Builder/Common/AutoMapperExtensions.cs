@@ -11,6 +11,7 @@ public static class AutoMapperExtensions
         {
             var config = new MapperConfiguration(cfg =>
             {
+                cfg.AddProfile(new AttachmentProfile());
                 cfg.AddProfile(new DraftProfile());
             });
 
