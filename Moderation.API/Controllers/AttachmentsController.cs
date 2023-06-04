@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FavoriteLiterature.Moderation.Controllers;
 
-public sealed class AttachmentController : BaseApiController
+public sealed class AttachmentsController : BaseApiController
 {
-    public AttachmentController(IMediator mediator) : base(mediator)
+    public AttachmentsController(IMediator mediator) : base(mediator)
     {
     }
 
@@ -23,4 +23,8 @@ public sealed class AttachmentController : BaseApiController
     public async Task<CreateAttachmentResponse> CreateAsync([FromForm] CreateAttachmentCommand command, 
         CancellationToken cancellationToken) 
         => await _mediator.Send(command, cancellationToken);
+
+    [HttpDelete("{id:guid}")]
+    public async Task<DeleteAttachmentResponse> DeleteAsync(Guid id, CancellationToken cancellationToken)
+        => await _mediator.Send(new DeleteAttachmentCommand(id), cancellationToken);
 }

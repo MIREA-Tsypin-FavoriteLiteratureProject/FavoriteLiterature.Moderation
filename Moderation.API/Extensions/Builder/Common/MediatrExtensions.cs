@@ -24,6 +24,7 @@ public static class MediatrExtensions
 
         builder.Services.AddTransient<IRequestHandler<GetAttachmentQuery, GetAttachmentResponse>, GetAttachmentQueryHandler>();
         builder.Services.AddTransient<IRequestHandler<CreateAttachmentCommand, CreateAttachmentResponse>, CreateAttachmentCommandHandler>();
+        builder.Services.AddTransient<IRequestHandler<DeleteAttachmentCommand, DeleteAttachmentResponse>, DeleteAttachmentCommandHandler>();
 
         #endregion
         
