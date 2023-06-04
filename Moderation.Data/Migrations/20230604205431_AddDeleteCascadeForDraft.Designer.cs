@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FavoriteLiterature.Moderation.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FavoriteLiterature.Moderation.Data.Migrations
 {
     [DbContext(typeof(FavoriteLiteratureModerationDbContext))]
-    partial class FavoriteLiteratureModerationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230604205431_AddDeleteCascadeForDraft")]
+    partial class AddDeleteCascadeForDraft
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

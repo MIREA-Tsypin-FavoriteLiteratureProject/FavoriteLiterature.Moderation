@@ -18,5 +18,10 @@ public sealed class DraftConfiguration : BaseEntityConfiguration<Draft>
         builder.Property(x => x.Description).HasColumnName("description");
         builder.Property(x => x.Authors).HasColumnName("authors").IsRequired();
         builder.Property(x => x.Genres).HasColumnName("genres").IsRequired();
+
+        builder
+            .HasMany(x => x.Attachments)
+            .WithOne(x => x.Draft)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
