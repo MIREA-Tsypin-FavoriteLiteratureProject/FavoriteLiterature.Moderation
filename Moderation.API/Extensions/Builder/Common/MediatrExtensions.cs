@@ -1,8 +1,11 @@
 ﻿using FavoriteLiterature.Moderation.Application.Handlers.Attachments.Commands;
+using FavoriteLiterature.Moderation.Application.Handlers.Attachments.Queries;
 using FavoriteLiterature.Moderation.Application.Handlers.Drafts.Commands;
 using FavoriteLiterature.Moderation.Application.Handlers.Drafts.Queries;
 using FavoriteLiterature.Moderation.Domain.Attachments.Requests.Commands;
+using FavoriteLiterature.Moderation.Domain.Attachments.Requests.Queries;
 using FavoriteLiterature.Moderation.Domain.Attachments.Responses.Commands;
+using FavoriteLiterature.Moderation.Domain.Attachments.Responses.Queries;
 using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Commands;
 using FavoriteLiterature.Moderation.Domain.Drafts.Requests.Queries;
 using FavoriteLiterature.Moderation.Domain.Drafts.Responses.Commands;
@@ -19,6 +22,7 @@ public static class MediatrExtensions
 
         #region Attachment
 
+        builder.Services.AddTransient<IRequestHandler<GetAttachmentQuery, GetAttachmentResponse>, GetAttachmentQueryHandler>();
         builder.Services.AddTransient<IRequestHandler<CreateAttachmentCommand, CreateAttachmentResponse>, CreateAttachmentCommandHandler>();
 
         #endregion
