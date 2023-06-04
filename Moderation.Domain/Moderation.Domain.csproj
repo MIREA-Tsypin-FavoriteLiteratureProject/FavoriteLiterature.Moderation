@@ -1,9 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <TargetFramework>$(TargetFramework)</TargetFramework>
+        <LangVersion>$(LangVersion)</LangVersion>
+        <Nullable>$(Nullable)</Nullable>
+        <ImplicitUsings>$(ImplicitUsings)</ImplicitUsings>
+        <RootNamespace>FavoriteLiterature.Moderation.Domain</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
+    </ItemGroup>
 
 </Project>

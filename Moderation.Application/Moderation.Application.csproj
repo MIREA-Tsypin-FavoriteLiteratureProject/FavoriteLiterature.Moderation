@@ -1,9 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <TargetFramework>$(TargetFramework)</TargetFramework>
+        <LangVersion>$(LangVersion)</LangVersion>
+        <Nullable>$(Nullable)</Nullable>
+        <ImplicitUsings>$(ImplicitUsings)</ImplicitUsings>
+        <RootNamespace>FavoriteLiterature.Moderation.Application</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" />
+      <PackageReference Include="MediatR" />
+      <PackageReference Include="Microsoft.AspNetCore.StaticFiles" />
+      <PackageReference Include="Newtonsoft.Json" />
+      <PackageReference Include="RabbitMQ.Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Moderation.Data\Moderation.Data.csproj" />
+      <ProjectReference Include="..\Moderation.Domain\Moderation.Domain.csproj" />
+    </ItemGroup>
 
 </Project>
