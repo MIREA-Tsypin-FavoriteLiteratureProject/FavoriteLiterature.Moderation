@@ -31,8 +31,8 @@ public sealed class CreateAttachmentCommandHandler : IRequestHandler<CreateAttac
 
         var fileId = Guid.NewGuid();
         var attachmentType = Path.GetExtension(command.File.FileName);
-        var fileName = fileId + attachmentType;
-        var filePath = Path.Combine(_attachmentStorageOptions.RootDirectory, fileName);
+        var fileName = string.Concat(fileId, attachmentType);
+        var filePath = Path.Combine(string.Concat(Directory.GetCurrentDirectory(), _attachmentStorageOptions.RootDirectory), fileName);
 
         await using var stream = new FileStream(filePath, FileMode.Create);
         await command.File.CopyToAsync(stream, cancellationToken);

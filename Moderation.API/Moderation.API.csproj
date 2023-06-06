@@ -30,4 +30,8 @@
       <ProjectReference Include="..\Moderation.Domain\Moderation.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
 </Project>
