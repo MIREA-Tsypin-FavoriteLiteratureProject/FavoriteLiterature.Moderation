@@ -10,5 +10,5 @@ public class AcceptedDraftMessage
     
     public List<Guid> Genres { get; set; }
 
-    public List<Guid> Files { get; set; }
+    public List<string> Files { get; set; }
 }

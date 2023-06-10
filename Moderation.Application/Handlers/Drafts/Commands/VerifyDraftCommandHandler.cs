@@ -38,8 +38,8 @@ public sealed class VerifyDraftCommandHandler : IRequestHandler<VerifyDraftComma
         if (command.Verified)
         {
             var message = _mapper.Map<AcceptedDraftMessage>(draftData);
-            var fileIds = await _unitOfWork.AttachmentsRepository.FindAllFileIdsAsync(draftData.Id, cancellationToken);
-            message.Files = fileIds;
+            var files = await _unitOfWork.AttachmentsRepository.FindAllDraftFilesAsync(draftData.Id, cancellationToken);
+            message.Files = files;
             SendMessage(message);
         }
         

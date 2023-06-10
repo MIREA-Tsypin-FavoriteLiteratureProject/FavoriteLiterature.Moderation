@@ -1,5 +1,4 @@
-﻿using System.Linq.Expressions;
-using FavoriteLiterature.Moderation.Data.Entities;
+﻿using FavoriteLiterature.Moderation.Data.Entities;
 using FavoriteLiterature.Moderation.Data.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,9 +10,9 @@ public class AttachmentsRepository : GenericRepository<Attachment>, IAttachments
     {
     }
 
-    public async Task<List<Guid>> FindAllFileIdsAsync(Guid draftId, CancellationToken cancellationToken = default) 
+    public async Task<List<string>> FindAllDraftFilesAsync(Guid draftId, CancellationToken cancellationToken = default) 
         => await _dbContext.Attachments
             .Where(x => x.DraftId == draftId)
-            .Select(x => x.FileId)
+            .Select(x => string.Concat(x.FileId, x.AttachmentTypeId))
             .ToListAsync(cancellationToken);
 }

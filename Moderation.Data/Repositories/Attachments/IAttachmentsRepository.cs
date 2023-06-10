@@ -5,5 +5,5 @@ namespace FavoriteLiterature.Moderation.Data.Repositories.Attachments;
 
 public interface IAttachmentsRepository : IGenericRepository<Attachment>
 {
-    Task<List<Guid>> FindAllFileIdsAsync(Guid draftId, CancellationToken cancellationToken = default);
+    Task<List<string>> FindAllDraftFilesAsync(Guid draftId, CancellationToken cancellationToken = default);
 }
