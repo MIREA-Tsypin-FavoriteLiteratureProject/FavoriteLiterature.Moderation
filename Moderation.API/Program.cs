@@ -1,20 +1,16 @@
-using FavoriteLiterature.Moderation.Data;
 using FavoriteLiterature.Moderation.Extensions;
 using FavoriteLiterature.Moderation.Extensions.Builder;
 using FavoriteLiterature.Moderation.Extensions.Builder.Common;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-if (string.IsNullOrWhiteSpace(connectionString))
-{
-    throw new Exception("Connection string is missing.");
-}
-
+builder.AddPostgresDatabase();
 builder.Services.AddControllers();
-builder.Services.AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearerAuthentication(builder.Configuration);
+
 builder.AddSwagger();
 builder.AddRepositories();
 builder.AddMediatr();
