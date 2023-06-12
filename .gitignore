@@ -4,4 +4,6 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
-wwwroot
+
+# Moderation.API backend
+**/Moderation.API/**/appsettings.Local.json

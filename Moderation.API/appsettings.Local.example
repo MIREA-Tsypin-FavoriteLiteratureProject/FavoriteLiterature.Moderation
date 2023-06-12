@@ -1,0 +1,27 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres"
+  },
+  "RabbitMq": {
+    "HostName": "localhost",
+    "Port": 5672,
+    "UserName": "guest",
+    "Password": "guest",
+    "Queue": "someQueue"
+  },
+  "AttachmentStorage": {
+    "RootDirectory": "YourPath"
+  },
+  "JwtOptions": {
+    "Issuer": "issuer-name",
+    "SecretKey": "some-secret-key",
+    "LifetimeInMinutes": 1
+  }
+}
