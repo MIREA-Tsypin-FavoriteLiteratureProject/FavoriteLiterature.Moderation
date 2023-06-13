@@ -13,6 +13,7 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearerAuthentication(builder.Configuration);
 
+builder.AddRolePolicy();
 builder.AddSwagger();
 builder.AddRepositories();
 builder.AddMediatr();
