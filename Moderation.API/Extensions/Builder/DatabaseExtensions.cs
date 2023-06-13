@@ -1,4 +1,5 @@
 ﻿using FavoriteLiterature.Moderation.Data;
+using FavoriteLiterature.Moderation.Data.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace FavoriteLiterature.Moderation.Extensions.Builder;
@@ -15,5 +16,13 @@ public static class DatabaseExtensions
         }
 
         builder.Services.AddDbContext<FavoriteLiteratureModerationDbContext>(options => options.UseNpgsql(connectionString));
+    }
+
+    public static void SeedDatabase(this WebApplication app)
+    {
+        using var serviceScope = app.Services.CreateScope();
+        var mainContext = serviceScope.ServiceProvider.GetRequiredService<FavoriteLiteratureModerationDbContext>();
+
+        DatabaseInitializer.Initialize(mainContext);
     }
 }
